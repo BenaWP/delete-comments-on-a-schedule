@@ -9,6 +9,11 @@ Author URI: https://www.linkedin.com/in/yvon-aulien-benahita-733350164/
 License: GPLv2
 */
 
+// Si ce fichier est acceder directement. On arrête tout.
+if ( ! defined( 'WPIC' ) ) {
+	die;
+}
+
 /* =========== Mise en places des champs ( inputs ) ============= */
 
 // paramètres.
