@@ -10,13 +10,13 @@ License: GPLv2
 */
 
 // Si ce fichier est acceder directement. On arrête tout.
-if ( ! defined( 'WPIC' ) ) {
+if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
 /* =========== Mise en places des champs ( inputs ) ============= */
 
-// paramètres.
+// Paramètres.
 add_action( 'admin_init', 'bya_cron_coment_init' );
 
 function bya_cron_coment_init() {
