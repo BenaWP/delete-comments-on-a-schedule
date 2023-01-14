@@ -105,6 +105,12 @@ function bya_cron_coment_init() {
 add_action( 'bya_comment_cron_hook', 'bya_cron_delete_comments' );
 
 function bya_cron_delete_comments() {
+
+	// Sécurité check, encore.
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+
 	global $wpdb;
 
 	$options      = get_option( 'bya_cron_comment_options' );
