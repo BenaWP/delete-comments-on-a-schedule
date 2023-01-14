@@ -4,12 +4,13 @@ Plugin Name: Delete Comments on a Schedule
 Plugin URI: http://example.com/wordpress-plugins/my-plugin
 Description: Ce plugin vous permet de nettoyer facilement votre base de données en supprimant les spams et les commentaires modérés qui encombrent votre site.
 Version: 1.0
-Author: BENAHITA Yvon Aulien
+Author: Yvon Aulien
 Author URI: https://www.linkedin.com/in/yvon-aulien-benahita-733350164/
 License: GPLv2
 */
 
-/*========================= Mise en places des champs ( inputs )============================= */
+/* =========== Mise en places des champs ( inputs ) ============= */
+
 // paramètres.
 add_action( 'admin_init', 'bya_cron_coment_init' );
 
@@ -90,11 +91,10 @@ function bya_cron_coment_init() {
 		echo '<input type="text" name="bya_cron_comment_options[bya_days_old]" value=" ' . esc_attr( $bya_days_old ) . ' " size="3" /> Jours';
 
 	}
-
-	/*========================= FIN Mise en places des champs ( inputs )============================= */
 }
+/*========== FIN Mise en places des champs ( inputs ) ========== */
 
-/*================ Hook personnalise et fonction pour supprimer les commentaires =================== */
+/*========= Hook personnalise et fonction pour supprimer les commentaires ==========*/
 
 // créer le hook personnalisé pour la programmation cron.
 add_action( 'bya_comment_cron_hook', 'bya_cron_delete_comments' );
@@ -124,5 +124,5 @@ function bya_cron_delete_comments() {
 		$wpdb->query( $wpdb->prepare( $sql, $bya_days_old ) );
 	}
 }
-/*================ FIN Hook personnalise et fonction pour supprimer les commentaires =================== */
+/*======= FIN Hook personnalise et fonction pour supprimer les commentaires ======== */
 
