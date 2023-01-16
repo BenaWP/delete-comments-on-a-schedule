@@ -34,3 +34,11 @@ function bya_add_settings_link( $links ) {
 	return $links;
 }
 /* ======= FIN Liens vers les paramètres ====== */
+
+/* ======= Rendre le plugin traduisible ======= */
+add_action( 'plugins_loaded', 'bya_load_text_domain' );
+
+function bya_load_text_domain() {
+	load_plugin_textdomain( 'delete-comments-on-a-schedule', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/'  );
+}
+/* ======= FIN Rendre le plugin traduisible ======= */
