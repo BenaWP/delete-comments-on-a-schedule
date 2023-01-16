@@ -14,7 +14,7 @@ function bya_cron_coment_init() {
 	// Enregistrement du champs select dans le Settings API.
 	add_settings_field(
 		'bya_cron_comment_type_field',
-		'Selectionnez les commentaires à Supprimer',
+		__( 'Selectionnez les commentaires à Supprimer', 'delete-comments-on-a-schedule' ),
 		'bya_cron_comment_type',
 		'discussion',
 		'default'
@@ -23,7 +23,7 @@ function bya_cron_coment_init() {
 	// Enregistrement du champs text (nbrs de jrs) dans le Settings API.
 	add_settings_field(
 		'bya_cron_days_old_field',
-		'Supprimer les commentaires plus anciens que',
+		__( 'Supprimer les commentaires plus anciens que', 'delete-comments-on-a-schedule' ),
 		'bya_cron_days_old',
 		'discussion',
 		'default'
@@ -63,10 +63,10 @@ function bya_cron_coment_init() {
 
 		// Affichage des options dans le select.
 		echo '<select name="bya_cron_comment_options[bya_comments]">';
-		echo '<option value="" ' . selected( $bya_comments, '', false ) . '">' . esc_html__( 'Aucun', 'wpcamp' ) . '</option>';
-		echo '<option value="spam" ' . selected( $bya_comments, 'spam', false ) . '>' . esc_html__( 'Commentaires spam', 'wpcamp' ) . '</option>';
-		echo '<option value="moderated" ' . selected( $bya_comments, 'moderated', false ) . '>' . esc_html__( 'Commentaires modérés', 'wpcamp' ) . '</option>';
-		echo '<option value="both" ' . selected( $bya_comments, 'both', false ) . ' >' . esc_html__( 'Les deux', 'wpcamp' ) . '</option>';
+		echo '<option value="" ' . selected( $bya_comments, '', false ) . '">' . esc_html( 'Aucun', 'delete-comments-on-a-schedule' ) . '</option>';
+		echo '<option value="spam" ' . selected( $bya_comments, 'spam', false ) . '>' . esc_html( 'Commentaires spam', 'delete-comments-on-a-schedule' ) . '</option>';
+		echo '<option value="moderated" ' . selected( $bya_comments, 'moderated', false ) . '>' . esc_html( 'Commentaires modérés', 'delete-comments-on-a-schedule' ) . '</option>';
+		echo '<option value="both" ' . selected( $bya_comments, 'both', false ) . ' >' . esc_html( 'Les deux', 'delete-comments-on-a-schedule' ) . '</option>';
 		echo '</select>';
 	}
 
@@ -77,7 +77,7 @@ function bya_cron_coment_init() {
 		$bya_days_old = ( $options['bya_days_old'] ) ? absint( $options['bya_days_old'] ) : 30;
 
 		// Affichage du champ de texte.
-		echo '<input type="text" name="bya_cron_comment_options[bya_days_old]" value=" ' . esc_attr( $bya_days_old ) . ' " size="3" /> Jours';
+		echo '<input type="text" name="bya_cron_comment_options[bya_days_old]" value=" ' . esc_attr( $bya_days_old ) . ' " size="3" /> '. esc_html( 'Jours', 'delete-comments-on-a-schedule' );
 
 	}
 }

@@ -7,7 +7,7 @@ Version: 1.0
 Author: Yvon Aulien
 Author URI: https://www.linkedin.com/in/yvon-aulien-benahita-733350164/
 License: GPLv2
-Text Domain: wpcamp
+Text Domain: delete-comments-on-a-schedule
 */
 
 // Si ce fichier est acceder directement. On arrête tout.
@@ -26,7 +26,7 @@ add_filter( $settings_filter_name, 'bya_add_settings_link' );
 function bya_add_settings_link( $links ) {
 
 	// On crée notre lien.
-	$settings_link = '<a href="options-discussion.php">' . __( 'Paramètres', 'wpcamp' ) . '</a>';
+	$settings_link = '<a href="options-discussion.php">' . __( 'Paramètres', 'delete-comments-on-a-schedule' ) . '</a>';
 
 	// On ajoute au lien Activer/Désactiver.
 	array_push( $links, $settings_link );
