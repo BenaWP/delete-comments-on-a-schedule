@@ -14,7 +14,7 @@ function bya_cron_coment_init() {
 	// Enregistrement du champs select dans le Settings API.
 	add_settings_field(
 		'bya_cron_comment_type_field',
-		__( 'Selectionnez les commentaires à Supprimer', 'delete-comments-on-a-schedule' ),
+		__( 'Sélectionnez les commentaires à supprimer', 'delete-comments-on-a-schedule' ),
 		'bya_cron_comment_type',
 		'discussion',
 		'default'
@@ -65,7 +65,7 @@ function bya_cron_coment_init() {
 		echo '<select name="bya_cron_comment_options[bya_comments]">';
 		echo '<option value="" ' . selected( $bya_comments, '', false ) . '">' . __( 'Aucun', 'delete-comments-on-a-schedule' ) . '</option>';
 		echo '<option value="spam" ' . selected( $bya_comments, 'spam', false ) . '>' . __( 'Commentaires spam', 'delete-comments-on-a-schedule' ) . '</option>';
-		echo '<option value="moderated" ' . selected( $bya_comments, 'moderated', false ) . '>' . __( 'Commentaires modérés', 'delete-comments-on-a-schedule' ) . '</option>';
+		echo '<option value="moderated" ' . selected( $bya_comments, 'moderated', false ) . '>' . __( 'Commentaires non approuvés', 'delete-comments-on-a-schedule' ) . '</option>';
 		echo '<option value="both" ' . selected( $bya_comments, 'both', false ) . ' >' . __( 'Les deux', 'delete-comments-on-a-schedule' ) . '</option>';
 		echo '</select>';
 	}

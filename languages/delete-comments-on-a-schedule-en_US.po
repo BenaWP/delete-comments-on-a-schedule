@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 17:56+0300\n"
-"PO-Revision-Date: 2023-01-17 08:51+0300\n"
+"POT-Creation-Date: 2023-01-17 10:58+0300\n"
+"PO-Revision-Date: 2023-01-17 11:00+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -23,8 +23,8 @@ msgid "Paramètres"
 msgstr "Settings"
 
 #: includes/bya-delete-comments-settings.php:17
-msgid "Selectionnez les commentaires à Supprimer"
-msgstr "Select the comments to delete"
+msgid "Sélectionnez les commentaires à supprimer"
+msgstr "Select comments to delete"
 
 #: includes/bya-delete-comments-settings.php:26
 msgid "Supprimer les commentaires plus anciens que"
@@ -39,8 +39,8 @@ msgid "Commentaires spam"
 msgstr "Spam comments"
 
 #: includes/bya-delete-comments-settings.php:68
-msgid "Commentaires modérés"
-msgstr "Moderate comments"
+msgid "Commentaires non approuvés"
+msgstr "Unapproved comments"
 
 #: includes/bya-delete-comments-settings.php:69
 msgid "Les deux"
