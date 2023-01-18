@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Delete Comments on a Schedule
-Plugin URI: http://example.com/wordpress-plugins/my-plugin
+Plugin URI: https://github.com/BenaWP/delete-comments-on-a-schedule
 Description: Ce plugin vous permet de nettoyer facilement votre base de données en supprimant les spams et les commentaires modérés qui encombrent votre site.
 Version: 1.0.0
 Author: Yvon Benahita
