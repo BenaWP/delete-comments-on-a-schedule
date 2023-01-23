@@ -44,9 +44,7 @@ register_uninstall_hook( __FILE__, 'benawp_dcos_delete_plugin_options' );
 function benawp_dcos_delete_plugin_options() {
 
 	// Suppression des options enregistrées dans la base de données.
-	global $wpdb;
-	$options_table = $wpdb->options;
-	$wpdb->query( "DELETE FROM $options_table WHERE option_name LIKE '%delete-comments-on-a-schedule%'" );
+	delete_option( 'benawp_dcos_options' );
 
 	// Suppression du hook personnalisé pour le cron job.
 	remove_action( 'benawp_dcos_hook', 'benawp_dcos_callback' );
