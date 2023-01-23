@@ -41,12 +41,15 @@ if ( ! function_exists( 'benawp_dcos_load_text_domain' ) ) {
 }
 
 register_uninstall_hook( __FILE__, 'benawp_dcos_delete_plugin_options' );
-function benawp_dcos_delete_plugin_options() {
+if ( ! function_exists( 'benawp_dcos_delete_plugin_options' ) ) {
+	function benawp_dcos_delete_plugin_options() {
 
-	// Suppression des options enregistrées dans la base de données.
-	delete_option( 'benawp_dcos_options' );
+		// Suppression des options enregistrées dans la base de données.
+		delete_option( 'benawp_dcos_options' );
 
-	// Suppression du hook personnalisé pour le cron job.
-	remove_action( 'benawp_dcos_hook', 'benawp_dcos_callback' );
+		// Suppression du hook personnalisé pour le cron job.
+		remove_action( 'benawp_dcos_hook', 'benawp_dcos_callback' );
+	}
 }
+
 
