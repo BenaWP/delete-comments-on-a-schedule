@@ -40,6 +40,22 @@ if ( ! function_exists( 'benawp_dcos_load_text_domain' ) ) {
 	}
 }
 
+register_activation_hook( __FILE__, 'benawp_dcos_set_defaults_values' );
+if ( ! function_exists( 'benawp_dcos_set_defaults_values' ) ) {
+	function benawp_dcos_set_defaults_values() {
+		// On met None et 30 jours comme valeurs par defaut.
+		if ( ! get_option( 'benawp_dcos_options' ) ) {
+			add_option(
+				'benawp_dcos_options',
+				array(
+					'benawp_dcos_comments' => '',
+					'benawp_dcos_days_old' => 30,
+				)
+			);
+		}
+	}
+}
+
 register_uninstall_hook( __FILE__, 'benawp_dcos_delete_plugin_options' );
 if ( ! function_exists( 'benawp_dcos_delete_plugin_options' ) ) {
 	function benawp_dcos_delete_plugin_options() {
