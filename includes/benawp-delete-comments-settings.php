@@ -36,19 +36,19 @@ if ( ! function_exists( 'benawp_dcos_init' ) ) {
 
 		// Si l'option est activée et.
 		// si elle n'est pas déjà programmée, programmons-la.
-		if ( $benawp_dcos_comments && ! wp_next_scheduled( 'benawp_comment_cron_hook' ) ) {
+		if ( $benawp_dcos_comments && ! wp_next_scheduled( 'benawp_dcos_hook' ) ) {
 
 			// programmer l'événement pour qu'il se déroule quotidiennement.
-			wp_schedule_event( time(), 'daily', 'benawp_comment_cron_hook' );
+			wp_schedule_event( time(), 'daily', 'benawp_dcos_hook' );
 
 			// si l'option n'est PAS activée et qu'elle est programmée, il faut la désactiver.
-		} elseif ( ! $benawp_dcos_comments && wp_next_scheduled( 'benawp_comment_cron_hook' ) ) {
+		} elseif ( ! $benawp_dcos_comments && wp_next_scheduled( 'benawp_dcos_hook' ) ) {
 
 			// obtenir l'heure de la prochaine exécution programmée.
-			$timestamp = wp_next_scheduled( 'benawp_comment_cron_hook' );
+			$timestamp = wp_next_scheduled( 'benawp_dcos_hook' );
 
 			// hook pour l'action personnalisée de déprogrammation.
-			wp_unschedule_event( $timestamp, 'benawp_comment_cron_hook' );
+			wp_unschedule_event( $timestamp, 'benawp_dcos_hook' );
 		}
 
 		// Créeons nos champs.

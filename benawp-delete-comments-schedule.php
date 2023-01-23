@@ -42,8 +42,13 @@ if ( ! function_exists( 'benawp_dcos_load_text_domain' ) ) {
 
 register_uninstall_hook( __FILE__, 'benawp_dcos_delete_plugin_options' );
 function benawp_dcos_delete_plugin_options() {
+
+	// Suppression des options enregistrées dans la base de données.
 	global $wpdb;
 	$options_table = $wpdb->options;
 	$wpdb->query( "DELETE FROM $options_table WHERE option_name LIKE '%delete-comments-on-a-schedule%'" );
+
+	// Suppression du hook personnalisé pour le cron job.
+	remove_action( 'benawp_dcos_hook', 'benawp_dcos_callback' );
 }
 
