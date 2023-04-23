@@ -1,8 +1,6 @@
 <?php
 
 // Paramètres.
-add_action( 'admin_init', 'benawp_dcos_init' );
-
 if ( ! function_exists( 'benawp_dcos_init' ) ) {
 	function benawp_dcos_init() {
 
@@ -31,7 +29,7 @@ if ( ! function_exists( 'benawp_dcos_init' ) ) {
 		);
 
 		// Récupère la valeure de l'option.
-		$options = get_option( 'benawp_dcos_options' );
+		$options              = get_option( 'benawp_dcos_options' );
 		$benawp_dcos_comments = $options['benawp_dcos_comments'];
 
 		// Si l'option est activée et.
@@ -82,3 +80,5 @@ if ( ! function_exists( 'benawp_dcos_init' ) ) {
 		}
 	}
 }
+
+add_action( 'admin_init', 'benawp_dcos_init' );

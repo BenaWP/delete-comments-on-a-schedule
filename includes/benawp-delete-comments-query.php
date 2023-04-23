@@ -1,8 +1,6 @@
 <?php
 
 // créer le hook personnalisé pour la programmation cron.
-add_action( 'benawp_dcos_hook', 'benawp_dcos_callback' );
-
 if ( ! function_exists( 'benawp_dcos_callback' ) ) {
 	function benawp_dcos_callback() {
 
@@ -31,3 +29,6 @@ if ( ! function_exists( 'benawp_dcos_callback' ) ) {
 		}
 	}
 }
+
+add_action( 'benawp_dcos_hook', 'benawp_dcos_callback' );
+

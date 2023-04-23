@@ -1,4 +1,4 @@
-# Delete Comments on a Schedule
+# Suppression automatique des commentaires indésirables
 
 Ce plugin vous permet de nettoyer facilement votre base de données en supprimant les spams et les commentaires modérés qui encombrent votre site.
 

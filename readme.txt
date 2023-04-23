@@ -1,4 +1,4 @@
-=== Delete Comments on a Schedule ===
+=== Suppression automatique des commentaires indésirables ===
 Contributors: BenaWP
 Tags: Commentaires, Nettoyage, Spam, Moderation, Suppression automatique, Planification, Cron, Base de données, Optimisation, WordPress, Plugins, Personnalisation, Contrôle de qualité, Administration, Utilisateur final
 Donate link: https://www.buymeacoffee.com/bena.wp
