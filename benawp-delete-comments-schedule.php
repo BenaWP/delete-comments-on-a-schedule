@@ -2,7 +2,7 @@
 /*
 Plugin Name: Suppression automatique des commentaires indésirables
 Plugin URI: https://github.com/BenaWP/delete-comments-on-a-schedule
-Description: Ce plugin vous permet de nettoyer facilement votre base de données en supprimant les spams et les commentaires modérés qui encombrent votre site.
+Description: Ce plugin vous permet de <strong>nettoyer facilement votre base de données</strong> en supprimant les spams et les commentaires modérés qui encombrent votre site.
 Version: 1.0.0
 Author: Yvon Benahita
 Author URI: https://www.linkedin.com/in/benahitayvon/
