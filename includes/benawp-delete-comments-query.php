@@ -8,7 +8,7 @@ if ( ! function_exists( 'benawp_dcos_callback' ) ) {
 
 		$options              = get_option( 'benawp_dcos_options' );
 		$benawp_dcos_comments = $options['benawp_dcos_comments'];
-		$bya_days_old         = ( $options['bya_days_old'] ) ? $options['bya_days_old'] : 30;
+		$benawp_dcos_days_old         = ( $options['benawp_dcos_days_old'] ) ? $options['benawp_dcos_days_old'] : 30;
 
 		// verifier si l'option est activé.
 		if ( $benawp_dcos_comments ) {
@@ -25,7 +25,7 @@ if ( ! function_exists( 'benawp_dcos_callback' ) ) {
 				$sql = "DELETE FROM wp_comments WHERE ( comment_approved = 'spam' OR  comment_approved = '0') AND DATEDIFF( now(), comment_date ) > %d";
 			}
 
-			$wpdb->query( $wpdb->prepare( $sql, $bya_days_old ) );
+			$wpdb->query( $wpdb->prepare( $sql, $benawp_dcos_days_old ) );
 		}
 	}
 }
