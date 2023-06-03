@@ -3,7 +3,7 @@ Contributors: BenaWP
 Tags: Commentaires, Nettoyage, Spam, Moderation, Suppression automatique, Planification, Cron, Base de données, Optimisation, WordPress, Plugins, Personnalisation, Contrôle de qualité, Administration, Utilisateur final
 Donate link: https://www.buymeacoffee.com/bena.wp
 Requires at least: 3.0
-Tested up to: 6.1.1
+Tested up to: 6.2.2
 Requires PHP: 5.6
 Stable tag: 1.0.0
 License: GPLv2 or later
